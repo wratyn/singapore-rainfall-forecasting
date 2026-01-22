@@ -4,17 +4,17 @@ from src.config import RAW_DIR
 from src.config import PROCESSED_DIR
 
 
-def load_raw_data() -> pd.DataFrame():
-    return pd.read_csv(RAW_DIR / "srcsc-2025-dam-data-for-students.csv")
+def load_raw_train_data() -> pd.DataFrame():
+    return pd.read_csv(RAW_DIR / "train.csv")
 
 
-def load_data_flumevale() -> pd.DataFrame():
-    return pd.read_csv(PROCESSED_DIR / "region_data" / "dam_data_flumevale.csv")
+def load_raw_test_data() -> pd.DataFrame():
+    return pd.read_csv(RAW_DIR / "test.csv")
 
 
-def load_data_lyndrassia() -> pd.DataFrame():
-    return pd.read_csv(PROCESSED_DIR / "region_data" / "dam_data_lyndrassia.csv")
+def load_wss() -> pd.DataFrame():
+    return pd.read_csv(RAW_DIR / "wss.csv")
 
 
-def load_data_navaldia() -> pd.DataFrame():
-    return pd.read_csv(PROCESSED_DIR / "region_data" / "dam_data_navaldia.csv")
+def load_external_features() -> pd.DataFrame():
+    return pd.read_csv(RAW_DIR / "external_features.csv")
